@@ -60,13 +60,19 @@ console.log("-----------------------------------")
 const person = {
   name: "Khang",
   age: 21,
-  address: "Vietnam"
+  address: "Vietnam",
+  university: {
+    name: "IUH",
+    major: "IT"
+  }
 }
 person.name = "abc"
 console.log(person.name)  // Khang
 console.log(person.age)  // 21
 console.log(person.address)  // Vietnam
-console.log(person)  // { name: 'Khang', age: 21, address: 'Vietnam' }
+console.log(person.university.name)  // IUH
+console.log(person.university.major)  // IT
+console.log(person) // { name: 'abc', age: 21, address: 'Vietnam', university: { name: 'IUH', major: 'IT' } }
 
 console.log("-----------------------------------")
 
@@ -75,6 +81,18 @@ console.log("-----------------------------------")
 const numbers = [1, 2, 3, "four"];
 console.log(numbers) // 2
 console.log(numbers[3]) // four
+
+const listPerson = [
+  { name: "Khang", age: 21 },
+  { name: "Nam", age: 22 },
+  { name: "Hoa", age: 23 },
+  { name: "Huy", age: 24 }
+]
+for (let person of listPerson) {
+  if (person.age < 23) {
+    console.log(person.name + " - " + person.age)
+  }
+}
 
 console.log("-----------------------------------")
 
